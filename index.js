@@ -7,7 +7,7 @@ const options = stdio.getopt({
 });
 
 const filter = jsfuck.encode("filter"),
-    eval = options.eval,
+    eval = jsfuck.encode(options.eval),
     func = jsfuck.encode(options.function);
 
 console.log('[]['+filter+']['+func+']('+eval+')()');
